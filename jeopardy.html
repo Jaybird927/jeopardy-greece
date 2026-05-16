@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Greece Jeopardy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ANCIENT GREECE JEOPARDY</h1>
+        </header>
+
+        <!-- Teams Section -->
+        <div class="teams-section">
+            <div class="team" data-team="corinth">
+                <img src="corinth.png" alt="Corinth" class="team-logo">
+                <h3>Corinth</h3>
+                <div class="score" id="corinth-score">0</div>
+            </div>
+            <div class="team" data-team="sparta">
+                <img src="sparta.png" alt="Sparta" class="team-logo">
+                <h3>Sparta</h3>
+                <div class="score" id="sparta-score">0</div>
+            </div>
+            <div class="team" data-team="megara">
+                <img src="megara.png" alt="Megara" class="team-logo">
+                <h3>Megara</h3>
+                <div class="score" id="megara-score">0</div>
+            </div>
+            <div class="team" data-team="athens">
+                <img src="athens.png" alt="Athens" class="team-logo">
+                <h3>Athens</h3>
+                <div class="score" id="athens-score">0</div>
+            </div>
+            <div class="team" data-team="argos">
+                <img src="argos.jpg" alt="Argos" class="team-logo">
+                <h3>Argos</h3>
+                <div class="score" id="argos-score">0</div>
+            </div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="game-board">
+            <div class="category">
+                <div class="category-header">Category 1</div>
+                <div class="clue" data-value="100" data-category="0" data-question="0">100</div>
+                <div class="clue" data-value="200" data-category="0" data-question="1">200</div>
+                <div class="clue" data-value="300" data-category="0" data-question="2">300</div>
+                <div class="clue" data-value="400" data-category="0" data-question="3">400</div>
+                <div class="clue" data-value="500" data-category="0" data-question="4">500</div>
+            </div>
+            <div class="category">
+                <div class="category-header">Category 2</div>
+                <div class="clue" data-value="100" data-category="1" data-question="0">100</div>
+                <div class="clue" data-value="200" data-category="1" data-question="1">200</div>
+                <div class="clue" data-value="300" data-category="1" data-question="2">300</div>
+                <div class="clue" data-value="400" data-category="1" data-question="3">400</div>
+                <div class="clue" data-value="500" data-category="1" data-question="4">500</div>
+            </div>
+            <div class="category">
+                <div class="category-header">Category 3</div>
+                <div class="clue" data-value="100" data-category="2" data-question="0">100</div>
+                <div class="clue" data-value="200" data-category="2" data-question="1">200</div>
+                <div class="clue" data-value="300" data-category="2" data-question="2">300</div>
+                <div class="clue" data-value="400" data-category="2" data-question="3">400</div>
+                <div class="clue" data-value="500" data-category="2" data-question="4">500</div>
+            </div>
+            <div class="category">
+                <div class="category-header">Category 4</div>
+                <div class="clue" data-value="100" data-category="3" data-question="0">100</div>
+                <div class="clue" data-value="200" data-category="3" data-question="1">200</div>
+                <div class="clue" data-value="300" data-category="3" data-question="2">300</div>
+                <div class="clue" data-value="400" data-category="3" data-question="3">400</div>
+                <div class="clue" data-value="500" data-category="3" data-question="4">500</div>
+            </div>
+            <div class="category">
+                <div class="category-header">Category 5</div>
+                <div class="clue" data-value="100" data-category="4" data-question="0">100</div>
+                <div class="clue" data-value="200" data-category="4" data-question="1">200</div>
+                <div class="clue" data-value="300" data-category="4" data-question="2">300</div>
+                <div class="clue" data-value="400" data-category="4" data-question="3">400</div>
+                <div class="clue" data-value="500" data-category="4" data-question="4">500</div>
+            </div>
+        </div>
+
+        <!-- Question Modal -->
+        <div id="question-modal" class="modal">
+            <div class="modal-content">
+                <div class="question-value"></div>
+                <div class="question-text"></div>
+                <div class="answer-section">
+                    <button class="show-answer-btn">Show Answer</button>
+                    <div class="answer-text" style="display: none;"></div>
+                </div>
+                <div class="team-buttons">
+                    <h4>Award Points To:</h4>
+                    <button class="team-btn" data-team="corinth">Corinth</button>
+                    <button class="team-btn" data-team="sparta">Sparta</button>
+                    <button class="team-btn" data-team="megara">Megara</button>
+                    <button class="team-btn" data-team="athens">Athens</button>
+                    <button class="team-btn" data-team="argos">Argos</button>
+                </div>
+                <button class="close-modal">Close</button>
+            </div>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div id="gameover-modal" class="modal">
+            <div class="modal-content">
+                <h1 style="color: #f4c430; text-align: center; margin-bottom: 30px;">🏆 GAME OVER! 🏆</h1>
+                <div id="standings-container"></div>
+                <button class="close-modal" onclick="location.reload()">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

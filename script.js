@@ -1,0 +1,234 @@
+// Game Data Structure
+const gameData = {
+    categories: [
+        "Category 1",
+        "Category 2",
+        "Category 3",
+        "Category 4",
+        "Category 5"
+    ],
+    questions: [
+        // Category 1
+        [
+            { question: "Question 1 for 100", answer: "Answer 1 for 100", value: 100 },
+            { question: "Question 1 for 200", answer: "Answer 1 for 200", value: 200 },
+            { question: "Question 1 for 300", answer: "Answer 1 for 300", value: 300 },
+            { question: "Question 1 for 400", answer: "Answer 1 for 400", value: 400 },
+            { question: "Question 1 for 500", answer: "Answer 1 for 500", value: 500 }
+        ],
+        // Category 2
+        [
+            { question: "Question 2 for 100", answer: "Answer 2 for 100", value: 100 },
+            { question: "Question 2 for 200", answer: "Answer 2 for 200", value: 200 },
+            { question: "Question 2 for 300", answer: "Answer 2 for 300", value: 300 },
+            { question: "Question 2 for 400", answer: "Answer 2 for 400", value: 400 },
+            { question: "Question 2 for 500", answer: "Answer 2 for 500", value: 500 }
+        ],
+        // Category 3
+        [
+            { question: "Question 3 for 100", answer: "Answer 3 for 100", value: 100 },
+            { question: "Question 3 for 200", answer: "Answer 3 for 200", value: 200 },
+            { question: "Question 3 for 300", answer: "Answer 3 for 300", value: 300 },
+            { question: "Question 3 for 400", answer: "Answer 3 for 400", value: 400 },
+            { question: "Question 3 for 500", answer: "Answer 3 for 500", value: 500 }
+        ],
+        // Category 4
+        [
+            { question: "Question 4 for 100", answer: "Answer 4 for 100", value: 100 },
+            { question: "Question 4 for 200", answer: "Answer 4 for 200", value: 200 },
+            { question: "Question 4 for 300", answer: "Answer 4 for 300", value: 300 },
+            { question: "Question 4 for 400", answer: "Answer 4 for 400", value: 400 },
+            { question: "Question 4 for 500", answer: "Answer 4 for 500", value: 500 }
+        ],
+        // Category 5
+        [
+            { question: "Question 5 for 100", answer: "Answer 5 for 100", value: 100 },
+            { question: "Question 5 for 200", answer: "Answer 5 for 200", value: 200 },
+            { question: "Question 5 for 300", answer: "Answer 5 for 300", value: 300 },
+            { question: "Question 5 for 400", answer: "Answer 5 for 400", value: 400 },
+            { question: "Question 5 for 500", answer: "Answer 5 for 500", value: 500 }
+        ]
+    ]
+};
+
+// Team Scores
+const scores = {
+    corinth: 0,
+    sparta: 0,
+    megara: 0,
+    athens: 0,
+    argos: 0
+};
+
+// Current Question
+let currentQuestion = null;
+
+// Initialize Game
+document.addEventListener('DOMContentLoaded', function() {
+    initializeBoard();
+    initializeEventListeners();
+});
+
+function initializeBoard() {
+    // Set category headers
+    const categoryHeaders = document.querySelectorAll('.category-header');
+    categoryHeaders.forEach((header, index) => {
+        header.textContent = gameData.categories[index];
+    });
+}
+
+function initializeEventListeners() {
+    // Clue click events
+    const clues = document.querySelectorAll('.clue');
+    clues.forEach(clue => {
+        clue.addEventListener('click', function() {
+            if (!this.classList.contains('used')) {
+                const category = parseInt(this.dataset.category);
+                const questionIndex = parseInt(this.dataset.question);
+                showQuestion(category, questionIndex, this);
+            }
+        });
+    });
+
+    // Show answer button
+    document.querySelector('.show-answer-btn').addEventListener('click', function() {
+        document.querySelector('.answer-text').style.display = 'block';
+        this.style.display = 'none';
+        // Enable team buttons after showing answer
+        document.querySelector('.team-buttons').style.display = 'block';
+    });
+
+    // Team buttons
+    const teamButtons = document.querySelectorAll('.team-btn');
+    teamButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const team = this.dataset.team;
+            awardPoints(team);
+        });
+    });
+
+    // Close modal
+    document.querySelector('.close-modal').addEventListener('click', closeModal);
+
+    // Close modal when clicking outside
+    document.getElementById('question-modal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+}
+
+function showQuestion(category, questionIndex, clueElement) {
+    const question = gameData.questions[category][questionIndex];
+    currentQuestion = { ...question, clueElement };
+
+    // Populate modal
+    document.querySelector('.question-value').textContent = `$${question.value}`;
+    document.querySelector('.question-text').textContent = question.question;
+    document.querySelector('.answer-text').textContent = question.answer;
+
+    // Reset answer display
+    document.querySelector('.answer-text').style.display = 'none';
+    document.querySelector('.show-answer-btn').style.display = 'inline-block';
+
+    // Hide team buttons until answer is shown
+    document.querySelector('.team-buttons').style.display = 'none';
+
+    // Show modal
+    document.getElementById('question-modal').style.display = 'block';
+}
+
+function awardPoints(team) {
+    if (currentQuestion) {
+        scores[team] += currentQuestion.value;
+        updateScore(team);
+
+        // Mark clue as used and add team logo
+        currentQuestion.clueElement.classList.add('used');
+
+        // Get team logo image source
+        const teamImages = {
+            corinth: 'corinth.png',
+            sparta: 'sparta.png',
+            megara: 'megara.png',
+            athens: 'athens.png',
+            argos: 'argos.jpg'
+        };
+
+        // Replace clue content with team logo
+        currentQuestion.clueElement.innerHTML = `<img src="${teamImages[team]}" alt="${team}" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">`;
+
+        closeModal();
+
+        // Check if game is over (someone reached 1500)
+        if (scores[team] >= 1500) {
+            setTimeout(() => showGameOver(), 500);
+        }
+    }
+}
+
+function updateScore(team) {
+    document.getElementById(`${team}-score`).textContent = scores[team];
+}
+
+function closeModal() {
+    document.getElementById('question-modal').style.display = 'none';
+    currentQuestion = null;
+}
+
+function showGameOver() {
+    // Create standings array
+    const standings = Object.entries(scores).map(([team, score]) => ({
+        team,
+        score
+    })).sort((a, b) => b.score - a.score); // Sort by score descending
+
+    // Team data
+    const teamData = {
+        corinth: { name: 'Corinth', image: 'corinth.png' },
+        sparta: { name: 'Sparta', image: 'sparta.png' },
+        megara: { name: 'Megara', image: 'megara.png' },
+        athens: { name: 'Athens', image: 'athens.png' },
+        argos: { name: 'Argos', image: 'argos.jpg' }
+    };
+
+    // Build standings HTML
+    let standingsHTML = '';
+    standings.forEach((standing, index) => {
+        const rank = index + 1;
+        const team = standing.team;
+        const isWinner = index === 0 ? 'winner' : '';
+        const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '';
+
+        standingsHTML += `
+            <div class="standing-item ${isWinner}">
+                <div class="standing-left">
+                    <div class="standing-rank">${medal || rank}</div>
+                    <img src="${teamData[team].image}" alt="${teamData[team].name}" class="standing-logo">
+                    <div class="standing-name">${teamData[team].name}</div>
+                </div>
+                <div class="standing-score">${standing.score}</div>
+            </div>
+        `;
+    });
+
+    document.getElementById('standings-container').innerHTML = standingsHTML;
+    document.getElementById('gameover-modal').style.display = 'block';
+}
+
+// Keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+    // Escape to close modal
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+
+    // Space to show answer
+    if (e.key === ' ' && document.getElementById('question-modal').style.display === 'block') {
+        e.preventDefault();
+        const showBtn = document.querySelector('.show-answer-btn');
+        if (showBtn.style.display !== 'none') {
+            showBtn.click();
+        }
+    }
+});
