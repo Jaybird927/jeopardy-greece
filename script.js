@@ -192,24 +192,34 @@ function showGameOver() {
         argos: { name: 'Argos', image: 'argos.jpg' }
     };
 
-    // Build standings HTML
+    // Build standings HTML with proper tie handling
     let standingsHTML = '';
+    let currentRank = 1;
+    let previousScore = null;
+
     standings.forEach((standing, index) => {
-        const rank = index + 1;
         const team = standing.team;
-        const isWinner = index === 0 ? 'winner' : '';
-        const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '';
+
+        // Handle ties - if score is different from previous, update rank
+        if (previousScore !== null && standing.score < previousScore) {
+            currentRank = index + 1;
+        }
+
+        const isWinner = currentRank === 1 ? 'winner' : '';
+        const medal = currentRank === 1 ? '🥇' : currentRank === 2 ? '🥈' : currentRank === 3 ? '🥉' : '';
 
         standingsHTML += `
             <div class="standing-item ${isWinner}">
                 <div class="standing-left">
-                    <div class="standing-rank">${medal || rank}</div>
+                    <div class="standing-rank">${medal || currentRank}</div>
                     <img src="${teamData[team].image}" alt="${teamData[team].name}" class="standing-logo">
                     <div class="standing-name">${teamData[team].name}</div>
                 </div>
                 <div class="standing-score">${standing.score}</div>
             </div>
         `;
+
+        previousScore = standing.score;
     });
 
     document.getElementById('standings-container').innerHTML = standingsHTML;
