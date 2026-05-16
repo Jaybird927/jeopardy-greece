@@ -1,52 +1,52 @@
 // Game Data Structure
 const gameData = {
     categories: [
-        "Category 1",
-        "Category 2",
-        "Category 3",
-        "Category 4",
-        "Category 5"
+        "Ancient Greek Education",
+        "Greek Alphabet",
+        "Greek Roots",
+        "Ancient Greek Philosophers",
+        "Use in Mathematics"
     ],
     questions: [
-        // Category 1
+        // Category 1: Ancient Greek Education
         [
-            { question: "Question 1 for 100", answer: "Answer 1 for 100", value: 100 },
-            { question: "Question 1 for 200", answer: "Answer 1 for 200", value: 200 },
-            { question: "Question 1 for 300", answer: "Answer 1 for 300", value: 300 },
-            { question: "Question 1 for 400", answer: "Answer 1 for 400", value: 400 },
-            { question: "Question 1 for 500", answer: "Answer 1 for 500", value: 500 }
+            { question: "(placeholder)", answer: "(placeholder)", value: 100 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 200 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 300 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 400 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 500 }
         ],
-        // Category 2
+        // Category 2: Greek Alphabet
         [
-            { question: "Question 2 for 100", answer: "Answer 2 for 100", value: 100 },
-            { question: "Question 2 for 200", answer: "Answer 2 for 200", value: 200 },
-            { question: "Question 2 for 300", answer: "Answer 2 for 300", value: 300 },
-            { question: "Question 2 for 400", answer: "Answer 2 for 400", value: 400 },
-            { question: "Question 2 for 500", answer: "Answer 2 for 500", value: 500 }
+            { question: "(placeholder)", answer: "(placeholder)", value: 100 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 200 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 300 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 400 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 500 }
         ],
-        // Category 3
+        // Category 3: Greek Roots
         [
-            { question: "Question 3 for 100", answer: "Answer 3 for 100", value: 100 },
-            { question: "Question 3 for 200", answer: "Answer 3 for 200", value: 200 },
-            { question: "Question 3 for 300", answer: "Answer 3 for 300", value: 300 },
-            { question: "Question 3 for 400", answer: "Answer 3 for 400", value: 400 },
-            { question: "Question 3 for 500", answer: "Answer 3 for 500", value: 500 }
+            { question: "(placeholder)", answer: "(placeholder)", value: 100 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 200 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 300 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 400 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 500 }
         ],
-        // Category 4
+        // Category 4: Ancient Greek Philosophers
         [
-            { question: "Question 4 for 100", answer: "Answer 4 for 100", value: 100 },
-            { question: "Question 4 for 200", answer: "Answer 4 for 200", value: 200 },
-            { question: "Question 4 for 300", answer: "Answer 4 for 300", value: 300 },
-            { question: "Question 4 for 400", answer: "Answer 4 for 400", value: 400 },
-            { question: "Question 4 for 500", answer: "Answer 4 for 500", value: 500 }
+            { question: "(placeholder)", answer: "(placeholder)", value: 100 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 200 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 300 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 400 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 500 }
         ],
-        // Category 5
+        // Category 5: Use in Mathematics
         [
-            { question: "Question 5 for 100", answer: "Answer 5 for 100", value: 100 },
-            { question: "Question 5 for 200", answer: "Answer 5 for 200", value: 200 },
-            { question: "Question 5 for 300", answer: "Answer 5 for 300", value: 300 },
-            { question: "Question 5 for 400", answer: "Answer 5 for 400", value: 400 },
-            { question: "Question 5 for 500", answer: "Answer 5 for 500", value: 500 }
+            { question: "(placeholder)", answer: "(placeholder)", value: 100 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 200 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 300 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 400 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 500 }
         ]
     ]
 };
