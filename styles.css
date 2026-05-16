@@ -116,7 +116,7 @@ header h1 {
     cursor: pointer;
     transition: all 0.3s ease;
     border: 2px solid #f4c430;
-    min-height: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
