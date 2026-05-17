@@ -8,13 +8,13 @@ const gameData = {
         "Use in Mathematics"
     ],
     questions: [
-        // Category 1: Ancient Greek Education
+        // Category 1: Ancient Spartan Education
         [
-            { question: "(placeholder)", answer: "(placeholder)", value: 100 },
+            { question: "True or False? Ancient Spartan women had more education than ancient Athenian women.", answer: "True", value: 100 },
             { question: "(placeholder)", answer: "(placeholder)", value: 200 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 300 },
+            { question: "True or False? Ancient Spartans cared if you were caught stealing.", answer: "True", value: 300 },
             { question: "(placeholder)", answer: "(placeholder)", value: 400 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 500 }
+            { question: "What were the 3 main subjects ancient Spartans studied?", answer: "athletics, dancing, and weapon training", value: 500 }
         ],
         // Category 2: Greek Alphabet
         [
