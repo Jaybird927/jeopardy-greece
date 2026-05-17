@@ -168,7 +168,7 @@ function awardPoints(team) {
 }
 
 function updateScore(team) {
-    document.getElementById(`${team}-score`).textContent = scores[team];
+    document.getElementById(`${team}-score`).textContent = `$${scores[team]}`;
 }
 
 function closeModal() {
