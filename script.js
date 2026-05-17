@@ -1,9 +1,9 @@
 // Game Data Structure
 const gameData = {
     categories: [
-        "Ancient Greek Education",
+        "Ancient Spartan Education",
         "Greek Alphabet",
-        "Greek Roots",
+        "Ancient Athenian Education",
         "Ancient Greek Philosophers",
         "Use in Mathematics"
     ],
