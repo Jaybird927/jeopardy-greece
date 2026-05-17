@@ -13,7 +13,7 @@ const gameData = {
             { question: "True or False? Ancient Spartan women had more education than ancient Athenian women.", answer: "True", value: 100 },
             { question: "True or False? Ancient Spartans cared if you stole food.", answer: "False - They only cared if you were CAUGHT stealing food, because that was the disappointing part to them.", value: 200 },
             { question: "What did ancient Spartan women do while their husbands were at war?", answer: "Protected their husband's belongings, including their children.", value: 300 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 400 },
+            { question: "What happened to ancient Spartan men at the age of 20?", answer: "They were given a test designed to challenge their fitness level, military capability, and leadership skills.", value: 400 },
             { question: "What were the 3 main subjects ancient Spartans studied?", answer: "athletics, dancing, and weapon training", value: 500 }
         ],
         // Category 2: Greek Alphabet
