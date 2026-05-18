@@ -19,8 +19,8 @@ const gameData = {
         // Category 2: Greek Alphabet
         [
             { question: "True or False? The Greek alphabet is the ancestor of all modern european alphabets.", answer: "True", value: 100 },
-            { question: "Before the 5th century BCE, the alphabet was written _________, but later written ____________.", answer: "right to left, left to right", value: 200 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 300 },
+            { question: "(placeholder)", answer: "(placeholder)", value: 200 },
+            { question: "Before the 5th century BCE, the alphabet was written _________, but later written ____________.", answer: "right to left, left to right", value: 300 },
             { question: "(placeholder)", answer: "(placeholder)", value: 400 },
             { question: "(placeholder)", answer: "(placeholder)", value: 500 }
         ],
