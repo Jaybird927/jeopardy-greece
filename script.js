@@ -139,6 +139,18 @@ function showQuestion(category, questionIndex, clueElement) {
     // Hide team buttons until answer is shown
     document.querySelector('.team-buttons').style.display = 'none';
 
+    // Check if question is True/False or Multiple Choice
+    const isTrueFalse = question.question.toLowerCase().includes('true or false');
+    const isMultipleChoice = question.question.includes('a)') || question.question.includes('b)') || question.question.includes('c)');
+
+    // Show/hide incorrect button based on question type
+    const incorrectBtn = document.querySelector('.incorrect-btn');
+    if (isTrueFalse || isMultipleChoice) {
+        incorrectBtn.style.display = 'block';
+    } else {
+        incorrectBtn.style.display = 'none';
+    }
+
     // Show modal
     document.getElementById('question-modal').style.display = 'block';
 }
