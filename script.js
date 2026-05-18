@@ -4,7 +4,6 @@ const gameData = {
         "Ancient Spartan Education",
         "Greek Alphabet",
         "Ancient Athenian Education",
-        "Greek Roots",
         "Use in Mathematics"
     ],
     questions: [
@@ -24,7 +23,7 @@ const gameData = {
             { question: "What was the official script of Athens?", answer: "Ionic", value: 400 },
             { question: "What were three works that were written with the Greek script, mentioned earlier? (Hint: I_____, T_______, O______)", answer: "Iliad, Theogony, and Odyssey", value: 500 }
         ],
-        // Category 3: Greek Roots
+        // Category 3: Ancient Athenian Education
         [
             { question: "(placeholder)", answer: "(placeholder)", value: 100 },
             { question: "(placeholder)", answer: "(placeholder)", value: 200 },
@@ -32,15 +31,7 @@ const gameData = {
             { question: "(placeholder)", answer: "(placeholder)", value: 400 },
             { question: "(placeholder)", answer: "(placeholder)", value: 500 }
         ],
-        // Category 4: Greek Roots
-        [
-            { question: "(placeholder)", answer: "(placeholder)", value: 100 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 200 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 300 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 400 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 500 }
-        ],
-        // Category 5: Use in Mathematics
+        // Category 4: Use in Mathematics
         [
             { question: "(placeholder)", answer: "(placeholder)", value: 100 },
             { question: "(placeholder)", answer: "(placeholder)", value: 200 },
