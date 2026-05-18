@@ -33,11 +33,11 @@ const gameData = {
         ],
         // Category 4: Use in Mathematics
         [
-            { question: "(placeholder)", answer: "(placeholder)", value: 100 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 200 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 300 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 400 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 500 }
+            { question: "True or False? There are many letters in the Greek alphabet that are used in mathematical problems.", answer: "True", value: 100 },
+            { question: "LOWERCASE Sigma in math is:\na) The exact same thing as the MAD.\nb) The mean.\nc) Effectively the same thing as the MAD, with slight calculation differences.", answer: "c", value: 200 },
+            { question: "How do you get the number Pi?", answer: "By dividing a circle's perimeter by its width.", value: 300 },
+            { question: "What is the job of UPPERCASE Sigma?\na) A giant plus sign, telling you to add all the numbers together.\nb) The mode.\nc) A large multiplication sign, so you don't get confused with the letter X.", answer: "a", value: 400 },
+            { question: "What two things does Mu represent in math?", answer: "The mean and one millionth of a meter.", value: 500 }
         ]
     ]
 };
