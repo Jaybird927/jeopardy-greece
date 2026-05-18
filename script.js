@@ -20,7 +20,7 @@ const gameData = {
         [
             { question: "True or False? The Greek alphabet is the ancestor of all modern european alphabets.", answer: "True", value: 100 },
             { question: "(placeholder)", answer: "(placeholder)", value: 200 },
-            { question: "Which of the following is true about the Greek alphabet?   a) The Greek alphabet is still written right to left.  b) The 2 branches of the alphabet were Doric and Ionic.  c) It is the first 'true' alphabet, which means it was written with vowels and consonants.", answer: "C", value: 300 },
+            { question: "Which of the following is true about the Greek alphabet?\na) The Greek alphabet is still written right to left.\nb) The 2 branches of the alphabet were Doric and Ionic.\nc) It is the first 'true' alphabet, which means it was written with vowels and consonants.", answer: "C", value: 300 },
             { question: "What was the official script of Athens?", answer: "Ionic", value: 400 },
             { question: "(placeholder)", answer: "(placeholder)", value: 500 }
         ],
