@@ -25,11 +25,11 @@ const gameData = {
         ],
         // Category 3: Ancient Athenian Education
         [
-            { question: "(placeholder)", answer: "(placeholder)", value: 100 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 200 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 300 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 400 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 500 }
+            { question: "True or False? Athenian women were given the same education as men.", answer: "False", value: 100 },
+            { question: "What age were Athenian boys sent off to a government-run school?", answer: "6 or 7", value: 200 },
+            { question: "The Athenian education system was guided by the concept of _______, meaning more than education, as it referred to the full development of a citizen: morally upright, intellectually capable, physically fit, and artistically literate.", answer: "paideia", value: 300 },
+            { question: "Why were Athenian students forced to memorize all their material?", answer: "Books were expensive in ancient Greek times, meaning that only wealthy people could afford them.", value: 400 },
+            { question: "What were four of the subjects focused on in ancient Athenian learning?", answer: "reading, writing, music, poetry, athletics, philosophy, and rhetoric.", value: 500 }
         ],
         // Category 4: Use in Mathematics
         [
