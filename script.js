@@ -4,7 +4,7 @@ const gameData = {
         "Ancient Spartan Education",
         "Greek Alphabet",
         "Ancient Athenian Education",
-        "Ancient Greek Philosophers",
+        "Greek Roots",
         "Use in Mathematics"
     ],
     questions: [
@@ -32,7 +32,7 @@ const gameData = {
             { question: "(placeholder)", answer: "(placeholder)", value: 400 },
             { question: "(placeholder)", answer: "(placeholder)", value: 500 }
         ],
-        // Category 4: Ancient Greek Philosophers
+        // Category 4: Greek Roots
         [
             { question: "(placeholder)", answer: "(placeholder)", value: 100 },
             { question: "(placeholder)", answer: "(placeholder)", value: 200 },
