@@ -18,11 +18,11 @@ const gameData = {
         ],
         // Category 2: Greek Alphabet
         [
-            { question: "True or False? The Greek alphabet is the ancestor of all modern european alphabets.", answer: "True", value: 100 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 200 },
+            { question: "True or False? The Greek alphabet is the ancestor of all modern European alphabets.", answer: "True", value: 100 },
+            { question: "True or False? Italian was the language the Greeks adopted to create the Greek script.", answer: "False - Phoenician", value: 200 },
             { question: "Which of the following is true about the Greek alphabet?\na) The Greek alphabet is still written right to left.\nb) The 2 branches of the alphabet were Doric and Ionic.\nc) It is the first 'true' alphabet, which means it was written with vowels and consonants.", answer: "C", value: 300 },
             { question: "What was the official script of Athens?", answer: "Ionic", value: 400 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 500 }
+            { question: "What were three works that were written with the Greek script, mentioned earlier? (Hint: I_____, T_______, O______)", answer: "Iliad, Theogony, and Odyssey", value: 500 }
         ],
         // Category 3: Greek Roots
         [
