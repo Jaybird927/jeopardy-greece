@@ -20,8 +20,8 @@ const gameData = {
         [
             { question: "True or False? The Greek alphabet is the ancestor of all modern european alphabets.", answer: "True", value: 100 },
             { question: "(placeholder)", answer: "(placeholder)", value: 200 },
-            { question: "Before the 5th century BCE, the alphabet was written _________, but later written ____________.", answer: "right to left, left to right", value: 300 },
-            { question: "(placeholder)", answer: "(placeholder)", value: 400 },
+            { question: "Which of the following is true about the Greek alphabet?   a) The Greek alphabet is still written right to left.  b) The 2 branches of the alphabet were Doric and Ionic.  c) It is the first 'true' alphabet, which means it was written with vowels and consonants.", answer: "C", value: 300 },
+            { question: "What was the official script of Athens?", answer: "Ionic", value: 400 },
             { question: "(placeholder)", answer: "(placeholder)", value: 500 }
         ],
         // Category 3: Greek Roots
@@ -107,6 +107,11 @@ function initializeEventListeners() {
         });
     });
 
+    // Incorrect button
+    document.querySelector('.incorrect-btn').addEventListener('click', function() {
+        markIncorrect();
+    });
+
     // Close modal
     document.querySelector('.close-modal').addEventListener('click', closeModal);
 
@@ -164,6 +169,18 @@ function awardPoints(team) {
         if (scores[team] >= 1500) {
             setTimeout(() => showGameOver(), 500);
         }
+    }
+}
+
+function markIncorrect() {
+    if (currentQuestion) {
+        // Mark clue as used
+        currentQuestion.clueElement.classList.add('used');
+
+        // Replace clue content with incorrect X image
+        currentQuestion.clueElement.innerHTML = `<img src="incorrect.jpg" alt="incorrect" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">`;
+
+        closeModal();
     }
 }
 

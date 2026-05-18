@@ -272,6 +272,25 @@ header h1 {
     transform: scale(1.05);
 }
 
+.incorrect-btn {
+    background: #e94560;
+    color: white;
+    border: 2px solid #e94560;
+    padding: 8px 15px;
+    margin: 10px auto 0;
+    font-size: 0.85em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.incorrect-btn:hover {
+    background: #ff5572;
+    transform: scale(1.05);
+}
+
 .close-modal {
     background: #e94560;
     color: white;
