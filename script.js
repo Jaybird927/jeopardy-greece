@@ -164,7 +164,7 @@ function awardPoints(team) {
         };
 
         // Replace clue content with team logo
-        currentQuestion.clueElement.innerHTML = `<img src="${teamImages[team]}" alt="${team}" style="width: 70%; height: 70%; border-radius: 50%; object-fit: cover;">`;
+        currentQuestion.clueElement.innerHTML = `<img src="${teamImages[team]}" alt="${team}" style="width: 50px; height: 50px; max-width: 90%; max-height: 90%; border-radius: 50%; object-fit: cover;">`;
 
         closeModal();
 
@@ -181,7 +181,7 @@ function markIncorrect() {
         currentQuestion.clueElement.classList.add('used');
 
         // Replace clue content with incorrect X image
-        currentQuestion.clueElement.innerHTML = `<img src="incorrect.jpg" alt="incorrect" style="width: 70%; height: 70%; border-radius: 50%; object-fit: cover;">`;
+        currentQuestion.clueElement.innerHTML = `<img src="incorrect.jpg" alt="incorrect" style="width: 50px; height: 50px; max-width: 90%; max-height: 90%; border-radius: 50%; object-fit: cover;">`;
 
         closeModal();
     }
